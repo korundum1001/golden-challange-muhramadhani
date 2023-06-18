@@ -1,0 +1,23 @@
+.whyus-parent {
+    margin: 5% 5%;
+}
+
+.whyus-child p {
+    font-weight: 500;
+}
+
+#whyus-parent-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.whyus-card {
+    width: 268px;
+    height: 196px;
+    border-radius: 8px;
+    border: 1px solid #D0D0D0;
+    font-weight: 500;
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+}

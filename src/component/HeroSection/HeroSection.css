@@ -1,0 +1,29 @@
+.herosection-parent {
+    width: 100%;
+    background-color: #F1F3FF;
+    
+}
+
+.herosection-container {
+    display: flex;
+    width: 100%;
+    background-color: #F1F3FF;
+    align-items: center;
+}
+
+.herosection-child {
+    flex: 1;
+    width: 50%
+}
+
+.herosection-left {
+    padding-left: 2%;
+}
+
+.herosection-left button {
+    width: 160px;
+    height: 36px;
+    background-color: #5CB85F;
+    color: white;
+    /* padding: 8px, 12px, 8px, 12px; */
+}
