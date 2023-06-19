@@ -1,5 +1,6 @@
 .navbarmain {
     background-color: #F1F3FF;
+    padding: 24px 249px 0 136px;
 }
 
 .logo {
@@ -8,4 +9,10 @@
     background-color: #0D28A6;
     /* margin-top: 25px;
     margin-left: 136p; */
+}
+
+@media (max-width: 767px){
+    .navbarmain{
+        padding: 0;
+    }
 }

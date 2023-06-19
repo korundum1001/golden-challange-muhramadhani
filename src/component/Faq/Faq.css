@@ -1,0 +1,9 @@
+.faq-container {
+    margin : 5% 2%;
+}
+
+.faq-parent {
+    display: flex;
+    justify-content: center;
+    margin: 0 2%;
+}

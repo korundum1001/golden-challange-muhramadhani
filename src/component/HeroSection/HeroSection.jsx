@@ -16,7 +16,10 @@ const HeroSection = () => {
           <button>Mulai Sewa Mobil</button>
         </Col>
         <Col flex="1" className="herosection-child herosection-right">
-          <img src="/src/assets/MercedesCar.png" alt="Foto Mobil" />
+          <div>
+            <img src="/src/assets/MercedesCar.png" alt="Foto Mobil" />
+          </div>
+          <div className="car-background"></div>
         </Col>
       </Row>
     </Container>

@@ -2,34 +2,39 @@ import React from "react";
 import "./Service.css";
 import { Container, Row, Col } from "react-bootstrap";
 
-const serviceData = [
-  "Sewa Mobil Dengan Supir di Bali 12 Jam",
-  "Sewa Mobil Lepas Kunci di Bali 24 Jam",
-  "Sewa Mobil Jangka Panjang Bulanan",
-  "Gratis Antar - Jemput Mobil di Bandara",
-  "Gratis Antar - Jemput Mobil di Bandara",
-];
 
-const Service = () => {
+
+const Service = ({data}) => {
   return (
-    <Container fluid style={{ width: "100%" }}>
+    <Container fluid style={{ width: "100%" }} className="service-container">
       <Row className="service-parent">
-        <Col className="service-child">
-          <img src="/src/assets/HappyGirl.png" alt="" />
+        <Col xs={12} lg={6} className="service-child">
+          <div className="green-circle"></div>
+          <div className="yellow-circle"></div>
+          <div className="blue-circle">
+            <img src="/src/assets/HappyGirl.png" alt="" />
+          </div>
+          <div className="red-circle"></div>
         </Col>
-        <Col className="service-child">
-          <h2>Best Car Rental for any kind of trip in (Lokasimu)!</h2>
-          <p>
-            Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga
-            lebih murah dibandingkan yang lain, kondisi mobil baru, serta
-            kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding,
-            meeting, dll.
-          </p>
-          <ul>
-            {serviceData.map((item) => (
-              <li>{item}</li>
-            ))}
-          </ul>
+        <Col xs={12} lg={6} className="service-child">
+          <div>
+            <h2>Best Car Rental for any kind of trip in (Lokasimu)!</h2>
+          </div>
+          <div>
+            <p>
+              Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga
+              lebih murah dibandingkan yang lain, kondisi mobil baru, serta
+              kualitas pelayanan terbaik untuk perjalanan wisata, bisnis,
+              wedding, meeting, dll.
+            </p>
+          </div>
+          <div>
+            <ul>
+              {data.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </Col>
       </Row>
     </Container>

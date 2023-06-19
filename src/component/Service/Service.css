@@ -1,13 +1,64 @@
 .service-parent {
-    display: flex;
-    justify-content: center;
+   display: flex;
+   justify-content: space-evenly;
+    height: 428px;
+    margin: 5% auto;
 }
 
-/* .service-child {
 
-} */
 
-.service-child P {
+
+.service-child {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.green-circle {
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    width: 133px;
+    height: 133px;
+    background-color: #92D094;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.yellow-circle {
+    position: absolute;
+    left: 60px;
+    top: 336px;
+    width: 48px;
+    height: 48px;
+    background-color: #F9CC00;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.blue-circle {
+    position: absolute;
+    left: 99px;
+    top: 68px;
+    width: 360px;
+    height: 360px;
+    background-color: #0D28A6;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red-circle {
+    position: absolute;
+    left: 383px;
+    top: 43px;
+    width: 25px;
+    height: 25px;
+    background-color: #FA2C5A;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.service-child p {
     font-weight: 500;
 }
 .service-child ul {
@@ -22,4 +73,4 @@
     border-radius: 50%;
     background-color: #CFD4ED;
     content: '✓';
-}
+} 

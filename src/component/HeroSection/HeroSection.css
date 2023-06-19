@@ -27,3 +27,17 @@
     color: white;
     /* padding: 8px, 12px, 8px, 12px; */
 }
+
+.hero-section-right {
+    position: relative;
+}
+
+/* .car-background {
+    position: absolute;
+    width: 704px;
+    height: 239px;
+    left: 736px;
+    top: 261px;
+    background-color: #0D28A6;
+    border-radius: 60px 0 0 0;
+} */
