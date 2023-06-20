@@ -9,12 +9,7 @@ const Service = ({data}) => {
     <Container fluid style={{ width: "100%" }} className="service-container">
       <Row className="service-parent">
         <Col xs={12} lg={6} className="service-child">
-          <div className="green-circle"></div>
-          <div className="yellow-circle"></div>
-          <div className="blue-circle">
-            <img src="/src/assets/HappyGirl.png" alt="" />
-          </div>
-          <div className="red-circle"></div>
+          <img src="/src/assets/cewesenyum.png" alt="" className="service-img"/>
         </Col>
         <Col xs={12} lg={6} className="service-child">
           <div>
