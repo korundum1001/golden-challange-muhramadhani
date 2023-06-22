@@ -1,0 +1,26 @@
+.searchbar-container {
+  height: 106px;
+  width: 1047px;
+}
+
+.form-label {
+  font-family: Rubik;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.form-option {
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.searchbar-button {
+  margin: auto;
+}

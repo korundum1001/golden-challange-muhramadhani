@@ -54,7 +54,6 @@
 .service-child ul li::before {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   background-color: #cfd4ed;
   content: "✓";
 }

@@ -1,16 +1,12 @@
-import { useState } from "react";
-import "./Homepage.css";
-import NavbarMain from "../component/Navbar/NavbarMain";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useState } from "react";
 import HeroSection from "../component/HeroSection/HeroSection";
 import Service from "../component/Service/Service";
-// import CarouselWithCards from '../component/Carousel/Carousel';
+import TestiCarousel from "../component/Carousel/Carousel";
 import WhyUs from "../component/WhyUs/WhyUs";
 import CTA from "../component/CTA/CTA";
 import Faq from "../component/Faq/Faq";
 import Footer from "../component/Footer/Footer";
 import {
-  dataMenu,
   serviceData,
   whyUsList,
   faqList,
@@ -18,13 +14,19 @@ import {
   footerMenuLIst,
   socialMediaIcons,
 } from "../helper/data";
+import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Homepage.css";
+
 
 function Homepage() {
+ 
+  
   return (
     <>
-       <HeroSection  />
+       <HeroSection showBtn={true} showHea={true} showPic={true} />
       <Service data={serviceData} />
-      {/* <CarouselWithCards/> */}
+      <TestiCarousel/>
       <WhyUs data={whyUsList} />
       <CTA />
       <Faq data={faqList} />

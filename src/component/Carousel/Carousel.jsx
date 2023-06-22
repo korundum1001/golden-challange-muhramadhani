@@ -1,12 +1,21 @@
-import React from "react";
-import "./Carousel.css";
-import Carousel from "react-bootstrap/Carousel";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Card, Carousel } from "react-bootstrap";
 
+const settings = {
+  centerPadding: '30px',
+centerMode: true,
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+};
 
 const testimonialCarousel = [
   {
-    image: "wwww.image1.com",
+    image: "/src/assets/img_photo.png",
     rating: "4",
     commentary:
       "“Lorem ipsum dolor sit amet, consectetur adipiscing elit," +
@@ -15,7 +24,7 @@ const testimonialCarousel = [
     profile: "John Dee 32, Bromo",
   },
   {
-    image: "wwww.image2.com",
+    image: "/src/assets/img_photo(1).png",
     rating: "5",
     commentary:
       "“Lorem ipsum dolor sit amet, consectetur adipiscing elit," +
@@ -24,7 +33,7 @@ const testimonialCarousel = [
     profile: "John Dee 32, Bromo",
   },
   {
-    image: "wwww.image3.com",
+    image: "/src/assets/img_photo.png",
     rating: "5",
     commentary:
       "“Lorem ipsum dolor sit amet, consectetur adipiscing elit," +
@@ -34,78 +43,31 @@ const testimonialCarousel = [
   },
 ];
 
-// const Carousel = () => {
-//   return (
-//     <div>
-//       <div>
-//         <h2>Testimonial</h2>
-//         <p>Berbagai review positif dari para pelanggan kami</p>
-//       </div>
-//       <div>
+const TestiCarousel= () => {
+  return (
+    <div>
+      <h2>Testimonial</h2>
+      <Slider {...settings} >
+        {testimonialCarousel.map(item => (
+           <Carousel.Item className='itemCaro'>
+           <Card className="card-carousel" >
+             <Card.Body className="card-body">
+               <div className="revPic">
+                 <img src={item.image} alt='testi pic' />
+               </div>
+               <div className="revCont">
+                 <img className='revSta' src='stars.png' alt='bintang5'/>
+                 <p className='revTex'>{item.commentary}</p>
+                 <p className='revPer'>{item.profile}</p>
+               </div>
+             </Card.Body>
+           </Card>
+         </Carousel.Item>
+        ))}
 
-//       </div>
-//     </div>
-//   );
-// };
+      </Slider>
+    </div>
+  );
+};
 
-// export default Carousel;
-
-// const CarouselWithCards = () => {
-//     const cards = [
-//       { title: "Card 1", description: "Lorem ipsum dolor sit amet" },
-//       { title: "Card 2", description: "Consectetur adipiscing elit" },
-//       { title: "Card 3", description: "Praesent commodo cursus magna" },
-//       { title: "Card 4", description: "Nunc eget leo at dolor tempor" },
-//       { title: "Card 5", description: "Donec varius tellus ac tellus" },
-//       { title: "Card 6", description: "Nulla facilisi. Aenean facilisis" },
-//     ];
-  
-//     return (
-//         <Container>
-//           <Row className="justify-content-center">
-//             <Col md={8}>
-//               <Carousel activeIndex={index} onSelect={() => {}}>
-//                 <Carousel.Item>
-//                   <Row>
-//                     {cards.slice(0, 3).map((card, cardIndex) => (
-//                       <Col key={cardIndex}>
-//                         <Card>
-//                           <Card.Body>
-//                             <Card.Title>{card.title}</Card.Title>
-//                             <Card.Text>{card.description}</Card.Text>
-//                           </Card.Body>
-//                         </Card>
-//                       </Col>
-//                     ))}
-//                   </Row>
-//                 </Carousel.Item>
-//                 <Carousel.Item>
-//                   <Row>
-//                     {cards.map((card, cardIndex) => (
-//                       <Col key={cardIndex}>
-//                         <Card>
-//                           <Card.Body>
-//                             <Card.Title>{card.title}</Card.Title>
-//                             <Card.Text>{card.description}</Card.Text>
-//                           </Card.Body>
-//                         </Card>
-//                       </Col>
-//                     ))}
-//                   </Row>
-//                 </Carousel.Item>
-//               </Carousel>
-//               <div className="carousel-controls">
-//                 <Button variant="primary" onClick={handlePrev} disabled={index === 0}>
-//                   Prev
-//                 </Button>
-//                 <Button variant="primary" onClick={handleNext} disabled={index === cards.length - 1}>
-//                   Next
-//                 </Button>
-//               </div>
-//             </Col>
-//           </Row>
-//         </Container>
-    //   );
-//   };
-  
-  export default CarouselWithCards;
+export default TestiCarousel;

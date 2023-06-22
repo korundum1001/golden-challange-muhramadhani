@@ -1,10 +1,11 @@
 import React from "react";
-import NavbarMain from "../Navbar/NavbarMain"
+import NavbarMain from "../Navbar/NavbarMain";
+import { Link } from "react-router-dom";
 import "./HeroSection.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { dataMenu } from "../../helper/data";
 
-const HeroSection = () => {
+const HeroSection = ({showBtn, showHea, showPic}) => {
   return (
     <Container
       fluid
@@ -12,9 +13,9 @@ const HeroSection = () => {
       className="navandherosection-container"
     >
       <Row>
-        <NavbarMain menu={dataMenu}/>
+        <NavbarMain menu={dataMenu} />
       </Row>
-      
+
       <Row className="herosection-parent">
         <Col
           flex="1"
@@ -22,13 +23,19 @@ const HeroSection = () => {
           md={6}
           className="herosection-child herosection-left"
         >
-          <h1>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h1>
-          <p>
-            Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas
-            terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
-            untuk sewa mobil selama 24 jam.
-          </p>
-          <button>Mulai Sewa Mobil</button>
+          {showHea && (
+            <h1>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h1>
+          )}
+          {showHea && (
+            <p>
+              Selamat datang di Binar Car Rental. Kami menyediakan mobil
+              kualitas terbaik dengan harga terjangkau. Selalu siap melayani
+              kebutuhanmu untuk sewa mobil selama 24 jam.
+            </p>
+          )}
+          <Link to={"/CarSearch"}>
+            {showBtn && <Button variant="custom">Mulai Sewa Mobil</Button>}
+          </Link>
         </Col>
         <Col
           flex="1"
@@ -36,10 +43,12 @@ const HeroSection = () => {
           md={4}
           className="herosection-child herosection-right"
         >
-
-          <div className="hero-img-background"></div>
-          <div className="hero-img"><img src="/src/assets/MercedesCar.svg" alt="foto mobil" /></div>
- 
+          {showPic && (<div className="hero-img-background"></div>)}
+          <div className="hero-img">
+            {showPic && (
+              <img src="/src/assets/MercedesCar.svg" alt="foto mobil" />
+            )}
+          </div>
         </Col>
       </Row>
     </Container>
