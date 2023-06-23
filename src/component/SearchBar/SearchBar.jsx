@@ -6,19 +6,7 @@ import "./SearchBar.css";
 
 
 
-const SearchBar = ({optionCategory, optionPrice, optionisRented, changeName, changeCategory, changePrice changeisRented, clicked}) => {
-  const [minPrice, setMinPrice] = useState(null);
-  const [maxPrice, setMaxPrice] = useState(null);
-  
-  const handlePriceChange = (e) => {
-    const selectedOption = e.target.value;
-    const selectedPrice = optionPrice.find((opt) => opt.value === selectedOption);
-
-    setMinPrice(selectedPrice.minPrice);
-    setMaxPrice(selectedPrice.maxPrice);
-    changePrice(selectedPrice.minPrice, selectedPrice.maxPrice);
-  };
-
+const SearchBar = ({optionCategory, optionPrice, optionisRented, changeName, changeCategory, changePrice, changeisRented, clicked}) => {
 
   return (
     <Container className="searchbar-container">
@@ -69,6 +57,7 @@ const SearchBar = ({optionCategory, optionPrice, optionisRented, changeName, cha
               >
                 <Form.Label className="form-label">Status</Form.Label>
                 <Form.Select onChange={changeisRented} aria-label="Default select example">
+                  <option>Pilih Status Mobil</option>
                   {optionisRented.map((opt) => (
                     <option value={opt.value}>{opt.status}</option>
                   ))}

@@ -15,7 +15,7 @@ const WhyUs = ({data}) => {
             </Row>
             <Row className="whyus-parent" id="whyus-parent-two">
                 {data.map((item) => (
-                    <Col lg={4} className="whyus-card">
+                    <Col lg={2} className="whyus-card">
                         <div><img src={item.icon} alt="" /></div>
                         <div>{item.feature}</div>
                         <div>{item.description}</div>

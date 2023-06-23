@@ -1,6 +1,12 @@
 .searchbar-container {
   height: 106px;
-  width: 1047px;
+  width: 70%;
+  background-color: white;
+  border-radius: 8px; 
+  position: absolute;
+  top: 85%;
+  left: 15%;
+  z-index: 5;
 }
 
 .form-label {
@@ -22,5 +28,10 @@
 }
 
 .searchbar-button {
-  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar-button button {
+  margin-left: 8px; 
 }

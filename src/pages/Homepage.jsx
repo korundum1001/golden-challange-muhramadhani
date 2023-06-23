@@ -14,7 +14,6 @@ import {
   footerMenuLIst,
   socialMediaIcons,
 } from "../helper/data";
-import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Homepage.css";
 

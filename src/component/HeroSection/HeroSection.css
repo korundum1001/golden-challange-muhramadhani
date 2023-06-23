@@ -6,7 +6,7 @@
 }
 
 .herosection-parent {
-    /* padding-left: 136px; */
+    padding-left: 136px;
     width: 100%;
     height: 436px;
     gap:  0;
@@ -76,11 +76,11 @@
     position: absolute;
     z-index: 1;
     right: 0;
-    top: 33px;
+    bottom: 0;
   }
 
   .hero-img img {
-    max-width: 704px;
+    max-width: 650px;
     height: auto;
   }
 
@@ -91,6 +91,7 @@
     
     .herosection-parent {
         margin-top: 50px;
+        padding-left: 16px;
         /* padding-top: 50px; */
     }
 

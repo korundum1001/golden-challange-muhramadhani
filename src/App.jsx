@@ -5,6 +5,7 @@ import CarDetail from './pages/CarDetail'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-bootstrap"
 
 
 function App() {

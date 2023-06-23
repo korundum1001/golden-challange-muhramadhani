@@ -1,17 +1,17 @@
-#detCont{
+.detail-container{
     margin-left: 199px;
     margin-right: 199px;
-    margin-top:31px;
-    margin-bottom: 150px;
-
+    margin-bottom: 20%;
+    position: absolute;
+    top:20%;
     display: flex;
 }
 
-#detCol1{
+.column-detail-1{
     margin-right: 32px;
 }
 
-#detCol1 h1{
+.column-detail-1 h1{
     font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
@@ -19,11 +19,11 @@
     line-height: 20px;
 }
 
-.packDet{
+.detail-package{
     margin-top: 16px;
 }
 
-.packDet h1{ 
+.detail-package h1{ 
     font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
@@ -34,7 +34,7 @@
     margin-bottom: 8px;
 }
 
-.packDet li{
+.detail-package li{
     font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
@@ -42,3 +42,14 @@
     line-height: 175%;
     color: #8A8A8A;
 }
+
+@media (max-width: 768px) {
+    .detail-container {
+      flex-direction: column;
+    }
+  
+    .column-detail-1,
+    #detCol2 {
+      width: 100%;
+    }
+  }

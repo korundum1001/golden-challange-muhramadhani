@@ -1,0 +1,9 @@
+.upper-section {
+    margin-bottom: 20%
+}
+
+@media (max-width: 768px) {
+.upper-section {
+    margin-bottom: 200%;
+}
+}

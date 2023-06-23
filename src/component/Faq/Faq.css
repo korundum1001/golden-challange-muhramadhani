@@ -1,9 +1,30 @@
 .faq-container {
-    margin : 5% 2%;
+    margin : 100px 0;
 }
 
 .faq-parent {
     display: flex;
     justify-content: center;
     margin: 0 2%;
+}
+
+.faq-child h2{
+    padding-left: 136px;
+}
+
+.faq-child p {
+    padding-left: 136px;
+}
+
+@media (max-width: 767px) {
+    .faq-child h2{
+        padding: 0 16px;
+    }
+    
+    .faq-child p {
+        padding: 0 16px;
+    }
+    .faq-child {
+        text-align: center;
+    }
 }

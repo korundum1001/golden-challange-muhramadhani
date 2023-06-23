@@ -17,8 +17,8 @@ import SearchBar from "../component/SearchBar/SearchBar";
 const CarSearch = () => {
   const [data, setData] = useState([]);
   const [name, setName] = useState("");
-  const [minprice, setminPrice] = useState("");
-  const [maxprice, setmaxPrice] = useState("")
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(1000000000000);
   const [category, setCategory] = useState("");
   const [isRented, setisRented] = useState("");
 
@@ -27,8 +27,16 @@ const CarSearch = () => {
   }, []);
 
   const getData = () => {
-    const api = `https://bootcamp-rent-cars.herokuapp.com/customer/v2/car?name=${name}&minprice=${minprice}&maxprice=${maxprice}&category=${category}&isRented=${isRented}`;
-
+    let api = `https://bootcamp-rent-cars.herokuapp.com/customer/v2/car?name=${name}&category=${category}&isRented=${isRented}`;
+  
+    if (minPrice !== null) {
+      api += `&minPrice=${minPrice}`;
+    }
+  
+    if (maxPrice !== null) {
+      api += `&maxPrice=${maxPrice}`;
+    }
+  
     axios.get(api).then((res) => {
       setData(res.data.cars);
     });
@@ -42,9 +50,9 @@ const CarSearch = () => {
     const selectedOption = e.target.value;
 
     const categoryMap = {
-      "1": "small",
-      "2": "medium",
-      "3": "large",
+      1: "small",
+      2: "medium",
+      3: "large",
     };
 
     const selectedCategory = categoryMap[selectedOption];
@@ -52,14 +60,28 @@ const CarSearch = () => {
     setCategory(selectedCategory);
   };
 
+
+  const changePrice = (minPrice, maxPrice) => {
+    setMinPrice(minPrice);
+    setMaxPrice(maxPrice);
+  };
+
+  const handlePriceChange = (e) => {
+    const selectedOption = e.target.value;
+    const selectedPrice = optionPriceSearchBar.find((opt) => opt.value === selectedOption);
   
+    const minPrice = selectedPrice.minPrice;
+    const maxPrice = selectedPrice.maxPrice;
+  
+    changePrice(minPrice, maxPrice);
+  };
 
   const handleisRentedChange = (e) => {
     const selectedOption = e.target.value;
 
     const isRentedMap = {
-      "1": true,
-      "2": false,
+      1: true,
+      2: false,
     };
 
     const selectedisRented = isRentedMap[selectedOption];
@@ -67,20 +89,19 @@ const CarSearch = () => {
     setisRented(selectedisRented);
   };
 
+  const navigate = useNavigate();
+
+
   const redirect = (id) => {
     navigate(`/CarDetail/${id}`);
   };
-  const handlePriceChange = (minPrice, maxPrice) => {
-    setMinPrice(minPrice);
-    setMaxPrice(maxPrice);
-  };
-  const navigate = useNavigate();
+
 
   console.log(data);
   return (
     <>
       <div className="upper-section">
-        <HeroSection showBtn={false} showHea={true} showPic={true} />
+        <HeroSection showBtn={false} showHea={true} showPic={true}/>
         <SearchBar
           optionCategory={optionCategorySearchBar}
           optionPrice={optionPriceSearchBar}
@@ -90,10 +111,11 @@ const CarSearch = () => {
           changeCategory={handleCategoryChange}
           changeisRented={handleisRentedChange}
           clicked={getData}
+          className="search-bar"
         />
       </div>
 
-<div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
         {data.map((item) => (
           <Container
             id="restCont"
@@ -108,8 +130,8 @@ const CarSearch = () => {
               />
               <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
-                <Card.Text>Harga: {item.price}</Card.Text>
-                <Card.Text>
+                <Card.Text className="card-text">Harga: {item.price}</Card.Text>
+                <Card.Text className="card-text">
                   Status: {item.status ? "Sudah disewa" : "Belum disewa"}
                 </Card.Text>
                 <Button
@@ -117,7 +139,7 @@ const CarSearch = () => {
                   variant="custom"
                   disabled={item.status}
                 >
-                  Sewa Mobil
+                  Pilih Mobil
                 </Button>
               </Card.Body>
             </Card>

@@ -1,24 +1,22 @@
-.footer-parent {
-    margin: 5% 2%;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
+footer-parent{
+  margin : 0 5%
 }
-
 .footer-child {
-  display: flex;
-  flex: 25%;
   flex-direction: column;
 }
 
 .footer-child div {
-    margin: 0 0;
+  margin: 0 0;
+  color: #000;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: 700;
+  line-height: 20px;
 }
 
 .footer-child-address div {
-    margin: 8px 0;
+  margin: 8px 0;
 }
-
 
 .footer-child ul {
   list-style-type: none;
@@ -27,27 +25,31 @@
 }
 
 .footer-child ul li {
-    margin: 8px 0;
+  margin: 8px 0;
 }
 
 .footer-child ul li a {
-    color: black;
-    font-weight: 200;
-    text-decoration: none;
+  color: black;
+  font-weight: 200;
+  text-decoration: none;
 }
-
 
 .footer-icons {
   display: flex;
 }
 
 .footer-icons div a img {
-    margin-right: 16px;
+  margin-right: 16px;
 }
-
 
 .footer-logo {
   width: 100px;
   height: 34px;
   background-color: #0d28a6;
+}
+
+@media (max-width: 767px) {
+  .footer-child {
+    margin: 8px 16px;
+  }
 }

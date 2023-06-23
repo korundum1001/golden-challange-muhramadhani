@@ -9,17 +9,29 @@ import {
   footerMenuLIst,
   socialMediaIcons,
 } from "../helper/data";
-import axios from "axios";
-import "./CarSearchAndResult.css";
+import "./CarDetail.css";
 
 const CarDetail = () => {
   return (
     <>
-        <HeroSection showBtn={false} showHea={false} showPic={false}/>
-        <DetailPack incdb={includePackage} excdb={excludePackage} rrodb={RROPackage}/>
-        <Footer menu={footerMenuLIst} icons={socialMediaIcons}/>
-    </>
-  )
-}
+      <div className="upper-section">
+        {" "}
+        <HeroSection
+          showBtn={false}
+          showHea={false}
+          showPic={false}
+          className="hero-in-car-detail"
+        />
+        <DetailPack
+          incdb={includePackage}
+          excdb={excludePackage}
+          rrodb={RROPackage}
+        />
+      </div>
 
-export default CarDetail
+      <Footer menu={footerMenuLIst} icons={socialMediaIcons} />
+    </>
+  );
+};
+
+export default CarDetail;

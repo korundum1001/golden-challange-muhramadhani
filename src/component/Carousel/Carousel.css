@@ -1,6 +1,24 @@
 .card-body {
-    margin-top: 40px;
-    margin-right: 32px;
-    width: 619px;
-    height: 270px
+  margin-top: 40px;
+  margin-right: 32px;
+  width: 619px;
+  height: 270px;
+}
+
+ h2 {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-family: Arial;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+h3 {
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: 700;
+  line-height: 20px;
 }

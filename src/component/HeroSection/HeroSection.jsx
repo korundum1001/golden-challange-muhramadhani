@@ -5,7 +5,7 @@ import "./HeroSection.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { dataMenu } from "../../helper/data";
 
-const HeroSection = ({showBtn, showHea, showPic}) => {
+const HeroSection = ({showBtn, showHea, showPic, className}) => {
   return (
     <Container
       fluid

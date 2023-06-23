@@ -5,10 +5,10 @@ import CarCardDetail from '../CarCardDetail/CarCardDetail';
 
 const DetailPack = ({incdb,excdb,rrodb}) => {
   return (
-    <Container id='detCont'>
-      <Col id='detCol1'xs={12} md={6}>
+    <Container className='detail-container'>
+      <Col lg={6} sm={6} className='column-detail-1'xs={12} md={6}>
         <h1>Tentang Paket</h1>
-        <Row className='packDet' id='packInc'>
+        <Row className='detail-package' id='packInc'>
           <h1>Include</h1>
           {
             incdb.map((item)=>
@@ -16,7 +16,7 @@ const DetailPack = ({incdb,excdb,rrodb}) => {
             )
           }
         </Row>
-        <Row className='packDet' id='packExc'>
+        <Row className='detail-package' id='packExc'>
           <h1>Exclude</h1>
           {
             excdb.map((item)=>
@@ -24,7 +24,7 @@ const DetailPack = ({incdb,excdb,rrodb}) => {
             )
           }
         </Row>
-        <Row className='packDet' id='packRro'>
+        <Row className='detail-package' id='packRro'>
           <h1>Refund, Reschedule, Overtime</h1>
           {
             rrodb.map((item)=>
@@ -33,7 +33,7 @@ const DetailPack = ({incdb,excdb,rrodb}) => {
           }
         </Row>
       </Col>
-      <Col id='detCol2'>
+      <Col lg={6} sm={6} id='detCol2'>
         <CarCardDetail />
       </Col>
     </Container>
