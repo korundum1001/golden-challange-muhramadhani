@@ -1,0 +1,44 @@
+#detCont{
+    margin-left: 199px;
+    margin-right: 199px;
+    margin-top:31px;
+    margin-bottom: 150px;
+
+    display: flex;
+}
+
+#detCol1{
+    margin-right: 32px;
+}
+
+#detCol1 h1{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.packDet{
+    margin-top: 16px;
+}
+
+.packDet h1{ 
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.packDet li{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 175%;
+    color: #8A8A8A;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./CTA.css";
 
 const CTA = () => {
@@ -14,7 +15,9 @@ const CTA = () => {
         </p>
       </div>
       <div className="cta-child cta-child button">
-        <button>Mulai Sewa Mobil</button>
+        <Link to={"/CarSearch"}>
+          <button>Mulai Sewa Mobil</button>
+        </Link>
       </div>
     </div>
   );

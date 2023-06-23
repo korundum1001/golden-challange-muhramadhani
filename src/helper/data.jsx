@@ -155,7 +155,7 @@ export const socialMediaIcons = [
   },
 ];
 
-export const optionStatusSearchBar = [
+export const optionisRentedSearchBar = [
   {
     value: "1",
     status: "Disewa",
@@ -188,15 +188,45 @@ export const optionPriceSearchBar = [
   {
     value: "1",
     price: "<Rp. 400.000",
+    minPrice : null,
+    maxPrice : 400000
   },
 
   {
     value: "2",
     price: "Rp. 400.000 - Rp. 600.000",
+    minPrice : 400000,
+    maxPrice : 600000
   },
 
   {
     value: "3",
-    price: "< Rp. 400.000",
+    price: "> Rp. 400.000",
+    minPrice : 600000,
+    maxPrice : null
   },
 ];
+
+export const includePackage=[
+  'Sudah termasuk bensin selama 12 jam',
+  'Sudah termasuk Tiket Wisata',
+  'Sudah termasuk pajak'
+]
+
+export const excludePackage=[
+  'Tidak termasuk biaya makan sopir Rp 75.000/hari',
+  'Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam',
+  'Tidak termasuk akomodasi penginapan'
+]
+
+export const RROPackage=[
+      'Tidak termasuk biaya makan sopir Rp 75.000/hari',
+      'Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam',
+      'Tidak termasuk akomodasi penginapan',
+      'Tidak termasuk biaya makan sopir Rp 75.000/hari',
+      'Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam',
+      'Tidak termasuk akomodasi penginapan',
+      'Tidak termasuk biaya makan sopir Rp 75.000/hari',
+      'Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam',
+      'Tidak termasuk akomodasi penginapan'
+]

@@ -26,7 +26,7 @@ function Homepage() {
     <>
        <HeroSection showBtn={true} showHea={true} showPic={true} />
       <Service data={serviceData} />
-      <TestiCarousel/>
+      <TestiCarousel data={testimonialCarousel}/>
       <WhyUs data={whyUsList} />
       <CTA />
       <Faq data={faqList} />
